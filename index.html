@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York Times</title>
+    <script src="js.js" defer></script>
     <style>
         body{
             display: flex;
@@ -40,7 +41,7 @@
             padding-top: 30px;
             border-right: 0px;
             border-left: 0px;
-            border-bottom: opx;
+            border-bottom: 0px;
             padding-bottom: 10px;
         }
 
@@ -97,7 +98,7 @@
             border-bottom: 0px;
         }
 
-        .douglas{
+        .douglas , .da{
             width: 30%;
             display: flex;
             flex-direction: row;
@@ -208,17 +209,214 @@
         .TNYT:hover{
             cursor: text;
         }
-        /* aside{
-            display: block;
+        aside {
+            display: none;
             transition: 0.5s ease-in-out;
-            width: 100px;
-            height: 100vh;
-            background: rgb(255, 92, 92);
-        } */
+            width: 0px;
+            height: 120vh;
+            background: rgb(255, 255, 255);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .as{
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+
+        }
+        .da{
+            display: none;
+        }
+        .per{
+            display: none;
+        }
+        .noticia3re{
+            display: none;
+        }
+        .escod{
+            display: none;
+        }
+        .as{
+            display: none;
+        }
+        .pess{
+            display: none;
+        }
+        @media screen and (max-width: 414px){
+            .escod, .as, .pess{
+                display: block;
+            }
+            aside{
+                display: block;
+                }
+            .butao, .douglas, .jorge3 {
+                display: none;
+            }
+            body{
+                overflow-x: hidden ;
+            }
+            .pai{
+                width: 100vw;
+                height: 100px;
+            }
+            .da{
+                display: block;
+                display: flex;
+                flex-direction: row;
+                width: 100vw;
+                justify-content: space-between;
+                
+            }
+            .da p{
+                font-size: 12px;
+            }
+            #da{
+                align-items: center;
+                height: 30px;
+                background-color: lightgrey;
+
+            }
+            .jorge2{
+                top: 0px;
+                background-color: white;
+                margin-right: -25px;
+                display: flex;
+                flex-direction: column;
+                height: 50px;
+                width: 100vw;
+                position: fixed;
+            }
+            .jorge, .mininot3{
+                display: none;
+            }
+            .douglas2 img{
+                height: 30px;
+                width: 270px;
+            }
+            #seve{
+                color: rgb(112, 169, 189);
+                width: 150px;
+            }
+            .aaa{
+                display: flex;
+                flex-direction: row;
+
+            }
+            .pai, .noticia3{
+                border-bottom: none;
+                border-left: none;
+            }
+            .noticias{
+                border-top: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .noticia1{
+                width: 100vw;
+            }
+            .noticias{
+                padding-top: 0px;
+                margin-top: -40px;
+            }
+            .noticia3{
+                display: none;
+            }
+            .noticia3re{
+                display: block;
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                height: 650px;
+                padding-top: 25px;
+                padding-left: -250px;
+                align-items: center;
+            }
+            .noticia3re .mininot{
+                margin-left: -40px;
+            }
+            .as img{
+                /* padding-top: 5px; */
+                height: 30px;
+                width: 30px;
+            }
+            h3, h4, h2{
+                width: 375px;
+            }
+            .noticia2{
+                padding-bottom: 25px;
+                border-bottom: 2px black solid;
+            }
+            .noticia2 img{
+                display: flex;
+                align-items: center;
+                width: 390px;
+            }
+            .per{
+                
+                display: block;
+                height: 30px;
+                width: 30px;
+                right: 10px;
+            }
+            .escod{
+                
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                overflow-x: hidden;
+                justify-content: space-evenly;
+
+            }
+            .pess{
+                align-self: center;
+                display: flex;
+                flex-direction: row;
+                padding: -25px;
+                height: 35px;
+                margin-bottom: 30px;
+            }
+            .pess button{
+                margin-left: 10px;
+                width: 41px;
+                height: 41px;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                background-color: rgb(86, 123, 149);
+            }
+            
+            .pess input{
+                border: 1px solid;
+                border-radius: 5px;
+                width: 319px;
+                height: 35px;
+            }
+            .jorginho{
+                padding: -25px;
+                border-bottom: 1px solid gray;
+                width: 100vw;
+            }
+            .jorginho b{
+                font-size: 30px;
+            }
+            .escod p{
+                align-self: flex-end;
+                margin-right: 30px;
+                font-size: 30px;
+            }
+}
 
     </style>
 </head>
 <body>
+    
     <div class="pai">
         <div class="jorge">
             <div class="douglas"><img src="pesquisa.png" alt="" class="iconpesq"></div>
@@ -235,8 +433,33 @@
             </div>
         </div>
         <div class="jorge2">
-            <div class="douglas">Friday, May 17, 2024 <br>Today’s Paper</div>
+            <div class="douglas" >Friday, May 17, 2024 <br>Today’s Paper</div>
+            <div class="aaa">
+            <aside class="aside">
+                <button onclick="teste()" class="as"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt=""></button>
+                <div class="escod">
+                    <div class="pess"><input type="text"><button>go</button></div>
+                    <div class="jorginho"><b> U.S.</b></div> <p>↓</p>
+                    <div class="jorginho"><b>World</b></div><p>↓</p>
+                    <div class="jorginho"><b>Business</b></div><p>↓</p>
+                    <div class="jorginho"><b>Arts</b></div><p>↓</p>
+                    <div class="jorginho"><b>Lifestyle</b></div><p>↓</p>
+                    <div class="jorginho"><b>Opinion</b></div><p>↓</p>
+                    <div class="jorginho"><b>Audio</b></div><p>↓</p>
+                    <div class="jorginho"><b>Games</b></div><p>↓</p>
+                    <div class="jorginho"><b>Cooking</b></div><p>↓</p>
+                    <div class="jorginho"><b>Wirecutter</b></div><p>↓</p>
+                    <div class="jorginho"><b>The Athletic</b></div>
+                </div>
+                
+            </aside>
             <div class="douglas2"><img src="TNYT.png" alt="" class="TNYT"></div>
+            <div class="per"><img class="per" src="https://static.vecteezy.com/system/resources/previews/020/911/729/non_2x/profile-icon-avatar-icon-user-icon-person-icon-free-png.png" alt=""></div>
+            </div>
+            <div class="da" id="da">
+                <div class="da" ><p>Friday, May 17, 2024 Today’s</p></div>
+                <div class="da" id="seve"><p>TRY 7 DAYS FREE</p></div>
+            </div>
             <div class="douglas"></div>
         </div>
         <div class="jorge3">
@@ -273,24 +496,14 @@
                 <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quae sequi quo a aut omnis, amet quidem aperiam iure quis maxime ipsum, recusandae eos. Hic repudiandae nobis laboriosam id nam!</h4>
             </div>
         </div>
+        <div class="noticia3re">
+            <div class="mininot">
+                <h3>Old lady loves her dog</h3>
+                <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quae sequi quo a aut omnis, amet quidem aperiam iure quis maxime ipsum, recusandae eos. Hic repudiandae nobis laboriosam id nam!</h4>
+            </div>
+            <img src="vcc.png" alt="" class="vcc">
+        </div>
     </div>
 
 </body>
 </html>
-<!-- <aside class="aside">
-    <button onclick="teste()">Clique aqui</button>
-</aside> -->
-<script defer>
-    function teste(){
-        const aside = document.querySelectorAll(".aside")[0]
-        console.log(aside.style.width)
-
-        if(aside.style.width == "100px"){
-            aside.style.width = "100vw"
-        }else{
-            aside.style.width = "100px"
-        }
-    }
-
-
-</script>
